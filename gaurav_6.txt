@@ -1,0 +1,51 @@
+Different types of grep commands in shell scripting 
+ man grep
+
+cs2016a120@user:~$ cat > test
+Aggarwal
+aggarwal
+agrawal
+agarwal
+Agarwal
+Agrawal
+agrwal
+
+Agrwalcs2016a120@user:~$ grep -i "aggarwal" test
+Aggarwal
+aggarwal
+
+cs2016a120@user:~$ grep -e "aggarwal" test
+aggarwal
+
+cs2016a120@user:~$ grep -v "aggarwal" test
+Aggarwal
+agrawal
+agarwal
+Agarwal
+Agrawal
+agrwal
+Agrwal
+~/gauarv$ grep -F "aggarwal" test
+aggarwal
+cs2016a120@user:~/gauarv$ grep -G "aggarwal" test
+aggarwal
+cs2016a120@user:~/gauarv$ grep -f "Aggarwal" test
+grep: Aggarwal: No such file or directory
+cs2016a120@user:~/gauarv$ grep -w "aggarwal" test
+aggarwal
+cs2016a120@user:~/gauarv$ grep -x "aggarwal" test
+aggarwal
+cs2016a120@user:~/gauarv$ grep -y "Agrawal" test
+agrawal
+Agrawal
+cs2016a120@user:~/gauarv$ grep -c "agrawal" test
+1
+cs2016a120@user:~/gauarv$ grep -l "agrawal" test
+test
+cs2016a120@user:~/iftekhar$ grep -P "agrawal" test
+agrawal
+cs2016a120@user:~/iftekhar$ grep -E "agrawal" test
+agrawal
+cs2016a120@user:~/iftekhar$ grep -y "agrwal" test
+agrwal
+Agrwal

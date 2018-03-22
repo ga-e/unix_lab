@@ -1,0 +1,4 @@
+sed is an non interactive editor
+sed has line addressing and context addressing
+sed works on group of filters
+It has special symbols
